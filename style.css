@@ -1,0 +1,891 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fffaf0;
+    color: #17231c;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 240, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #eee7d8;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+    height: 80px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+
+    background: #f4bd45;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 27px;
+}
+
+.logo h2 {
+    font-size: 18px;
+    color: #173f2a;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #777;
+}
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #286447;
+}
+
+.instagram-btn {
+    text-decoration: none;
+
+    background: #173f2a;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.instagram-btn:hover {
+    background: #286447;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 100px 0;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.label {
+    display: inline-block;
+
+    background: #e9f3e8;
+
+    color: #286447;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 78px);
+
+    line-height: 1;
+
+    margin: 25px 0;
+
+    color: #173f2a;
+}
+
+.hero h1 span {
+    color: #d89d26;
+}
+
+.hero-text p {
+    max-width: 560px;
+
+    color: #6d756f;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+
+    padding: 14px 23px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #173f2a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #286447;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: #f4bd45;
+    color: #3c2c0b;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    position: relative;
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.circle-yellow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #f4bd45;
+
+    border-radius: 50%;
+
+    right: 10px;
+    top: 30px;
+}
+
+.plant-card {
+    width: 350px;
+    height: 400px;
+
+    position: relative;
+    z-index: 2;
+
+    background: #173f2a;
+
+    border-radius: 35px;
+
+    padding: 30px;
+
+    box-shadow: 0 25px 60px rgba(23, 63, 42, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-cactus {
+    font-size: 190px;
+
+    background: #f1dfae;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.plant-info {
+    color: white;
+
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+.plant-info strong {
+    display: block;
+
+    font-size: 18px;
+}
+
+.plant-info span {
+    font-size: 11px;
+
+    color: #cbd9cf;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 45px;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: #173f2a;
+
+    margin: 15px 0;
+}
+
+.section-title p {
+    color: #727972;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+    padding: 90px 0;
+}
+
+.products-container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+
+    border: 1px solid #eee9dd;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(23, 63, 42, 0.12);
+}
+
+.product-image {
+    height: 210px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 105px;
+}
+
+.cactus-green {
+    background: #dcebd8;
+}
+
+.cactus-yellow {
+    background: #f8e7ad;
+}
+
+.cactus-orange {
+    background: #f5d2a8;
+}
+
+.cactus-pink {
+    background: #efd5d1;
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.category {
+    font-size: 10px;
+
+    color: #286447;
+
+    font-weight: bold;
+}
+
+.product-content h3 {
+    color: #173f2a;
+
+    margin: 8px 0;
+
+    font-size: 18px;
+}
+
+.product-content p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    min-height: 62px;
+}
+
+.product-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.product-bottom strong {
+    color: #173f2a;
+
+    font-size: 17px;
+}
+
+.product-bottom button {
+    border: none;
+
+    background: #173f2a;
+
+    color: white;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.product-bottom button:hover {
+    background: #d89d26;
+    color: #17231c;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #173f2a;
+
+    color: white;
+
+    padding: 100px 0;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.about-logo {
+    background: white;
+
+    border-radius: 35px;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+.logo-big {
+    width: 230px;
+    height: 230px;
+
+    margin: auto;
+
+    background: #f4bd45;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 130px;
+}
+
+.about-logo h3 {
+    color: #173f2a;
+
+    margin-top: 20px;
+
+    font-size: 21px;
+}
+
+.about-logo p {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+.about-text .label {
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #dcebdd;
+}
+
+.about-text h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+.about-text p {
+    color: #d4e0d7;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 12px;
+}
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.stats div {
+    padding: 18px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.07);
+
+    border-radius: 18px;
+}
+
+.stats strong {
+    display: block;
+
+    font-size: 22px;
+}
+
+.stats span {
+    font-size: 11px;
+
+    color: #c4d5c8;
+}
+
+
+/* =========================
+   ADVANTAGES
+========================= */
+
+.advantages {
+    padding: 90px 0;
+}
+
+.advantages-container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.advantage {
+    background: white;
+
+    border: 1px solid #eee9dd;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.advantage-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.advantage h3 {
+    color: #173f2a;
+
+    margin-bottom: 10px;
+}
+
+.advantage p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #f1ead9;
+
+    padding: 80px 0;
+}
+
+.contact-box {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #173f2a;
+
+    font-size: 40px;
+
+    margin: 15px 0;
+}
+
+.contact-box p {
+    color: #777;
+}
+
+.contact-button {
+    text-decoration: none;
+
+    background: #173f2a;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.contact-button:hover {
+    background: #286447;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #102c1e;
+
+    color: #dce8df;
+
+    padding: 30px 0;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.footer-container strong {
+    color: white;
+}
+
+.footer-container p {
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #cbd8cf;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .instagram-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-image {
+        min-height: 370px;
+    }
+
+    .plant-card {
+        width: 290px;
+        height: 350px;
+    }
+
+    .big-cactus {
+        width: 230px;
+        height: 230px;
+
+        font-size: 90px;
+    }
+
+    .circle-yellow {
+        width: 230px;
+        height: 230px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 38px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contact-box h2 {
+        font-size: 35px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
