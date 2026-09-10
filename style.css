@@ -889,3 +889,20 @@ footer {
     }
 
 }
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.contact-info a {
+    color: #286447;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
